@@ -37,7 +37,7 @@ jobs:
 
         docker run "$IMAGE_NAME"
 
-        docker run "$IMAGE_NAME" code scan
+        docker run "$IMAGE_NAME" --api-base-url "${CORTEX_API_BASE_URL}" --api-key "${CORTEX_API_KEY}" --api-key-id "${CORTEX_API_KEY_ID}" code scan
         
         # docker run --rm \
         #   --volume "${{ github.workspace }}:/workspace" \
