@@ -29,7 +29,7 @@ jobs:
         exit 0
         fi
         
-        IMAGE_NAME="distributions-dev.traps.paloaltonetworks.com/cli-docker/${TOKEN}/method:amd64-latest-dev"
+        IMAGE_NAME="${{ vars.IMAGE_DIST }}.traps.paloaltonetworks.com/cli-docker/${TOKEN}/method:amd64-latest-dev"
 
         echo "Pulling CLI Docker image"
         docker pull ${IMAGE_NAME}
